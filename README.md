@@ -1,2 +1,2 @@
 # plagiarism-detection
-Algorithm for detect similarities between documents - Cosine Similarity
+Simple algorithm for detect similarities between documents - using Cosine Similarity.
