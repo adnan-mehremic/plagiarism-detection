@@ -5,8 +5,8 @@ from collections import Counter
 import math
 
 
-document_1 = 'AI is our friend and it has been friendly'
-document_2 = 'AI and humans have always been friendly'
+original_document = 'AI is our friend and it has been friendly'
+new_document = 'AI and humans have always been friendly'
 
 
 def document_to_vector(document):
@@ -15,8 +15,8 @@ def document_to_vector(document):
     return Counter(all_words)
 
 
-vector_1 = document_to_vector(document_1.lower())
-vector_2 = document_to_vector(document_2.lower())
+vector_1 = document_to_vector(original_document.lower())
+vector_2 = document_to_vector(new_document.lower())
 
 
 def cosine_similarity(vector1, vector2):
@@ -34,6 +34,6 @@ plagiarism_factor = cosine_similarity(vector_1, vector_2)
 print('Plagiarism factor: ', plagiarism_factor)
 
 if plagiarism_factor > 0.40:
-    print('Your document is plagiat')
+    print('Your document is a plagiarism.')
 else:
-    print('Your document is not plagiat')
+    print('Your document is not a plagiarism.')
