@@ -5,8 +5,6 @@ from collections import Counter
 import math
 
 
-
-
 original_document = 'AI is our friend and it has been friendly'
 new_document = 'AI and humans have always been friendly'
 
@@ -39,4 +37,3 @@ if plagiarism_factor > 0.40:
     print('Your document is a plagiarism.')
 else:
     print('Your document is not a plagiarism.')
-    
