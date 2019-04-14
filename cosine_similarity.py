@@ -5,6 +5,8 @@ from collections import Counter
 import math
 
 
+
+
 original_document = 'AI is our friend and it has been friendly'
 new_document = 'AI and humans have always been friendly'
 
@@ -26,7 +28,7 @@ def cosine_similarity(vector1, vector2):
     sum_of_vec2 = sum([vector2[x]**2 for x in vector2.keys()])
     multiplier_of_sum = math.sqrt(sum_of_vec1) * math.sqrt(sum_of_vec2)
 
-    return float(sum_of_vectors) / multiplier_of_sum
+    return sum_of_vectors/ multiplier_of_sum
 
 
 plagiarism_factor = cosine_similarity(vector_1, vector_2)
@@ -37,3 +39,4 @@ if plagiarism_factor > 0.40:
     print('Your document is a plagiarism.')
 else:
     print('Your document is not a plagiarism.')
+    
